@@ -1,4 +1,8 @@
 .idea
 db.sqlite3
 *.pyc
+<<<<<<< HEAD
 __pycache__
+=======
+__pycache__
+>>>>>>> 0b58c613e9f1b161c8e0948e062f4453009c0754
