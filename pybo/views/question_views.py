@@ -63,7 +63,7 @@ def question_delete(request, question_id):
 
 
 @login_required(login_url='common:login')
-def vote_question(request, question_id):
+def question_vote(request, question_id):
     """
     pybo 질문 추천 등록
     """
