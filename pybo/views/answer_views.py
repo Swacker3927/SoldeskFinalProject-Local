@@ -70,7 +70,7 @@ def answer_delete(request, answer_id):
 
 
 @login_required(login_url='common:login')
-def answer_vote(request, answer_id):
+def vote_answer(request, answer_id):
     """
     pybo 답변 추천 등록
     """
