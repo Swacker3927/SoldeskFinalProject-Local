@@ -62,7 +62,6 @@ def question_delete(request, question_id):
     return redirect('index')
 
 
-"""
 @login_required(login_url='common:login')
 def question_vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
@@ -71,4 +70,3 @@ def question_vote(request, question_id):
     else:
         question.voter.add(request.user)
     return redirect('pybo:detail', question_id=question.id)
-"""
