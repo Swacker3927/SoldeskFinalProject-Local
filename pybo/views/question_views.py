@@ -40,7 +40,7 @@ def question_modify(request, question_id):
         form = QuestionForm(request.POST, instance=question)
         if form.is_valid():
             question = form.save(commit=False)
-            question.modify_date = timezone.now()   # 수정일시 저장
+            question.modify_date = timezone.now()  # 수정일시 저장
             question.save()
             return redirect('pybo:detail', question_id=question.id)
     else:
@@ -62,14 +62,13 @@ def question_delete(request, question_id):
     return redirect('index')
 
 
+"""
 @login_required(login_url='common:login')
 def question_vote(request, question_id):
-    """
-    pybo 질문 추천 등록
-    """
     question = get_object_or_404(Question, pk=question_id)
     if request.user == question.author:
         messages.error(request, '본인이 작성한 글을 추천할 수 없습니다.')
     else:
         question.voter.add(request.user)
     return redirect('pybo:detail', question_id=question.id)
+"""
