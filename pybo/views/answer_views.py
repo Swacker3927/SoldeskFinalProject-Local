@@ -53,7 +53,7 @@ def answer_modify(request, answer_id):
     else:
         form = AnswerForm(instance=answer)
     context = {'answer': answer, 'form': form}
-    return render(request, 'pybo/question_detail.html', context)
+    return render(request, 'pybo/answer_form.html', context)
 
 
 @login_required(login_url='common:login')
