@@ -32,7 +32,7 @@
                 </div>
                 <div class="my-3">
                     <a href="javascript:void(0)" class="recommend btn btn-sm btn-outline-secondary"
-                       data-uri="{% url 'pybo:question_vote' question.id %}">
+                       data-uri="{% url 'pybo:vote_question' question.id %}">
                         추천
                         <span class="badge rounded-pill bg-success">
                             {{ question.voter.count }}
@@ -104,7 +104,7 @@
                 </div>
                 <div class="my-3">
                     <a href="javascript:void(0)" class="recommend btn btn-sm btn-outline-secondary"
-                       data-uri="{% url 'pybo:answer_vote' answer.id %}">
+                       data-uri="{% url 'pybo:vote_answer' answer.id %}">
                         추천
                         <span class="badge rounded-pill bg-success">
                             {{ answer.voter.count }}
