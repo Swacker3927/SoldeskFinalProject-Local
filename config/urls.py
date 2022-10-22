@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+
 from pybo.views import base_views
 
 urlpatterns = [
@@ -23,3 +24,5 @@ urlpatterns = [
     path('pybo/', include('pybo.urls')),
     path('common/', include('common.urls'))
 ]
+
+handler404 = 'common.views.page_not_found'
