@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -171,10 +171,11 @@ LOGGING = {
             'level': 'INFO',
             'filters': ['require_debug_false'],
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': BASE_DIR / 'logs/SoldeskFinalProject.log',
+            'filename': os.path.join(BASE_DIR / 'logs/SoldeskFinalProject.log'),
+            'encoding': 'UTF-8',
             'maxBytes': 1024*1024*5,  # 5 MB
             'backupCount': 5,
-            'formatter': 'standard',
+            'formatter': 'standard'
         },
     },
     'loggers': {
