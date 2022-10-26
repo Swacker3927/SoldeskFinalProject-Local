@@ -5,8 +5,8 @@ import logging
 
 from ..models import Question
 
-
 logger = logging.getLogger('pybo')
+
 
 def index(request):
     logger.info("INFO 레벨로 출력")
